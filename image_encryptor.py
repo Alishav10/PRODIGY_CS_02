@@ -46,10 +46,10 @@ def encrypt():
 
     output_file = "encrypted_image.png"
     if xor_encrypt_decrypt(path, key, output_file):
-        status_label.config(text=f"✅ Encrypted and saved as {output_file}", fg="green")
+        status_label.config(text=f" Encrypted and saved as {output_file}", fg="green")
         messagebox.showinfo("Done", f"Encrypted image saved.\nNow ready to decrypt.")
         
-        # 🔁 Auto-load the encrypted image into the path
+        # Auto-load the encrypted image into the path
         file_entry.delete(0, tk.END)
         file_entry.insert(0, output_file)
 
@@ -69,7 +69,7 @@ def decrypt():
 
     output_file = "decrypted_image.png"
     if xor_encrypt_decrypt(path, key, output_file):
-        status_label.config(text=f"✅ Decrypted and saved as {output_file}", fg="blue")
+        status_label.config(text=f" Decrypted and saved as {output_file}", fg="blue")
         open_image(output_file)
 
 # GUI setup
